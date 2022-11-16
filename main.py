@@ -11,6 +11,9 @@ for new_q in question_data:
 
 
 quiz = QuizBreain(question_bank)
+
+
+quiz.quiz_amount_choice()
 while quiz.still_has_questions():
     quiz.next_question()
 

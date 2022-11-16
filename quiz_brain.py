@@ -6,7 +6,14 @@ class QuizBreain:
         self.question_list = q_list
 
     def still_has_questions(self):
-        return self.question_number < len(self.question_list)
+        return self.question_number + 1 <= self.question_amount
+
+    def quiz_amount_choice(self):
+        try:
+            self.question_amount = int(input("How many questions would you like to answer?"
+            "[N.B: Maximum amount of question is 100]: "))
+        except ValueError:
+            print("I'm terribly sorry, but we require an integer...")
 
     def next_question(self):
         current_question = self.question_list[self.question_number]
